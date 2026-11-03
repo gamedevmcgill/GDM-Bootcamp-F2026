@@ -41,6 +41,8 @@ public class BetterPlayerController : MonoBehaviour
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+            // Player jump audio here
         }
     }
 
@@ -96,6 +98,8 @@ public class BetterPlayerController : MonoBehaviour
     {
         if (other.CompareTag("PickUp"))
         {
+            // Player duck quack audio here
+
             other.gameObject.SetActive(false);
         }
     }
