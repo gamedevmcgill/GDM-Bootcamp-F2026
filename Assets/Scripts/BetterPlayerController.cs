@@ -43,6 +43,7 @@ public class BetterPlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
             // Player jump audio here
+            AudioManager.Instance.PlayJumpSound();
         }
     }
 
@@ -99,6 +100,7 @@ public class BetterPlayerController : MonoBehaviour
         if (other.CompareTag("PickUp"))
         {
             // Player duck quack audio here
+            AudioManager.Instance.PlayQuackSound();
 
             other.gameObject.SetActive(false);
         }

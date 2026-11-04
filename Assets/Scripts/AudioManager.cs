@@ -3,6 +3,9 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     // Put variables here 
+    [SerializeField] private AudioSource music;
+    [SerializeField] private AudioSource jumpSFX;
+    [SerializeField] private AudioSource quackSFX;
 
     private static AudioManager instance;
     public static AudioManager Instance
@@ -42,9 +45,19 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         // Start music here 
+        music.Play();
     }
 
     // Create function to play jump sound here 
+    public void PlayJumpSound()
+    {
+        jumpSFX.Play();
+    }
+
+    public void PlayQuackSound()
+    {
+        quackSFX.Play();
+    }
 
     // Create function to play quack sound here  
 
